@@ -7,7 +7,7 @@ batch_size=128
 filepath = "data/test.csv"
 features,ids = data.read_data_test(filepath)
 features = features.reshape(features.shape + (1,))
-
+features = features-128.0/128.0
 ids_test = ids[:50]
 
 # x = tf.placeholder(tf.float32,(None,40,40,1))
